@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  left: -7rem;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(210deg, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  width: 30%;
+  height: 88%;
+  border-radius: 0 0 30rem 30rem;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-color: hsla(270deg, 100%, 95%, 0.199);
+  right: -7rem;
+  bottom: 0;
+  width: 30%;
+  height: 88%;
+  border-radius: 30rem 30rem 0 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 10rem;
+}
+.container .left {
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  width: 285px;
+  height: 535px;
+  background-color: hsl(270deg, 20%, 96%);
+  border: 1.5rem solid white;
+  border-radius: 3.5rem;
+  transform: translateX(37.4%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  overflow: hidden;
+}
+.container .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .right__title {
+  font-size: 4rem;
+  color: hsl(271deg, 36%, 24%);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding-bottom: 2.5rem;
+}
+.container .right__desc {
+  color: hsl(270deg, 7%, 64%);
+  line-height: 1.55;
+  word-spacing: 1.5px;
+}
+
+.app .notch {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  z-index: 200;
+  width: 59%;
+  height: 2.1rem;
+  background-color: white;
+  border-radius: 0 0 1.3rem 1.3rem;
+}
+.app .header {
+  width: 100%;
+  height: 7rem;
+  background: linear-gradient(280deg, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  border-radius: 0 0 0.65rem 0.65rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.6rem 1rem 0.9rem 1rem;
+}
+.app .header__arrow {
+  height: 1.3rem;
+  width: 0.85rem;
+}
+.app .header__avatar {
+  width: 3rem;
+  height: 3rem;
+  border: 2.3px solid hsl(276deg, 100%, 81%);
+  border-radius: 50%;
+}
+.app .header__account {
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.app .header__account__name {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.app .header__account__status {
+  font-size: 0.9rem;
+  color: hsl(276deg, 100%, 81%);
+}
+.app .header__dots {
+  transform: rotate(90deg);
+  height: 1.1rem;
+  margin-left: 1.5rem;
+}
+.app .chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+}
+.app .chat .receive {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  width: 70%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 1.2rem 1.2rem 1.2rem 0.2rem;
+  color: hsl(276deg, 55%, 52%);
+  background-color: rgba(211, 205, 205, 0.404);
+}
+.app .chat .sent-flex {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+.app .chat .sent-flex__img {
+  border-radius: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.app .chat .sent {
+  max-width: 70%;
+  font-size: 0.9rem;
+  text-align: end;
+  margin: 0 0 0 auto;
+  background-color: white;
+  padding: 0.7rem 0.8rem;
+  border-radius: 1.2rem 1.2rem 0.2rem 1.2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.app .chat .price {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  color: rgba(255, 255, 255, 0.6705882353);
+  background: linear-gradient(90deg, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  padding: 0.7rem 1.2rem 0.7rem 0.8rem;
+  border-radius: 1.2rem 1.2rem 1.2rem 0.2rem;
+}
+.app .chat .price .time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.app .chat .price .circle {
+  border: 1px solid rgba(255, 255, 255, 0.6705882353);
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.app .chat .price .number {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.app .type {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.app .type input {
+  margin-left: 1.5rem;
+  width: 80%;
+  border: none;
+}
+.app .type input:focus {
+  outline: none;
+}
+.app .type input::-moz-placeholder {
+  color: hsl(206deg, 6%, 79%);
+}
+.app .type input:-ms-input-placeholder {
+  color: hsl(206deg, 6%, 79%);
+}
+.app .type input::placeholder {
+  color: hsl(206deg, 6%, 79%);
+}
+.app .type button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  background-color: hsl(271deg, 36%, 24%);
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.app .type button img {
+  width: 2rem;
+  height: 2rem;
+}
+.app .type button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1037px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container .left {
+    transform: translateX(0%);
+  }
+  .container .right {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .container {
+    padding: 6rem 1.5rem;
+  }
+
+  body::before {
+    width: 50%;
+    height: 60%;
+  }
+
+  body::after {
+    width: 50%;
+    height: 60%;
+  }
+}/*# sourceMappingURL=style.css.map */
